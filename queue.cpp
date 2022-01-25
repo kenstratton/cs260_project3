@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-const int LEN = 3; // Length of queue (Note: the acutual length of queue becomes LEN - 1)
+const int LEN = 3; // Length of queue (Note: the number values actually can be stored is LEN - 1)
 
 int queue[LEN]; // Queue (empty index -> 0)
 int tail = 0; // Index where a new value is added (0 ~ LEN-1)
@@ -46,7 +46,7 @@ void enqueue(int v) {
     if (tail == LEN) tail = 0; // back to 0 if tail reaches the end
 }
 
-// dequeue (head にある要素を返して head をインクリメント)
+// Extract a head value and switch a head location
 int dequeue() {
     if (isEmpty()) {
         cout << "queue is empty." << endl;
